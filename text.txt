@@ -1,0 +1,2 @@
+This is the short text shown for the cat command so that all
+the flags of the command could fit in the terminal.

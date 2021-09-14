@@ -1,0 +1,106 @@
+Flags used in the code and their functionality.
+
+
+IN LS COMMAND:
+
+‘-a’
+‘--all’
+     In directories, do not ignore file names that start with ‘.’.
+‘-A’
+‘--almost-all’
+     In directories, do not ignore all file names that start with ‘.’;
+     ignore only ‘.’ and ‘..’.  The ‘--all’ (‘-a’) option overrides this
+     option.
+'-1'
+	print the files one in each line.
+
+
+
+
+IN DATE COMMAND:
+‘-u’
+‘--utc’
+‘--universal’
+     Use Universal Time by operating as if the ‘TZ’ environment variable
+     were set to the string ‘UTC0’.  UTC stands for Coordinated
+     Universal Time, established in 1960.  Universal Time is often
+     called “Greenwich Mean Time” (GMT) for historical reasons.
+     Typically, systems ignore leap seconds and thus implement an
+     approximation to UTC rather than true UTC.
+‘-R’
+‘--rfc-email’
+     Display the date and time using the format ‘%a, %d %b %Y %H:%M:%S
+     %z’, evaluated in the C locale so abbreviations are always in
+     English.  For example:
+
+          Fri, 09 Sep 2005 13:51:39 -0700
+‘-d DATESTR’
+‘--date=DATESTR’
+     Display the date and time specified in DATESTR instead of the
+     current date and time.  DATESTR can be in almost any common format.
+     It can contain month names, time zones, ‘am’ and ‘pm’, ‘yesterday’,
+     etc.  For example, ‘--date="2004-02-27 14:19:13.489392193 +0530"’
+     specifies the instant of time that is 489,392,193 nanoseconds after
+     February 27, 2004 at 2:19:13 PM in a time zone that is 5 hours and
+     30 minutes east of UTC.
+
+
+
+
+IN CAT COMMAND
+‘-E’
+‘--show-ends’
+     Display a ‘$’ after the end of each line.
+‘-n’
+‘--number’
+     Number all output lines, starting with 1.  This option is ignored
+     if ‘-b’ is in effect.
+
+
+
+
+IN HISTORY COMMAND
+-c 			reinitialises the history, clears all the space in history
+"number"	prints last "number" lines of the history 
+
+
+
+
+IN RMDIR COMMAND
+‘-p’
+‘--parents’
+     Remove DIRECTORY, then try to remove each component of DIRECTORY.
+     So, for example, ‘rmdir -p a/b/c’ is similar to ‘rmdir a/b/c a/b
+     a’.  As such, it fails if any of those directories turns out not to
+     be empty.  Use the ‘--ignore-fail-on-non-empty’ option to make it
+     so such a failure does not evoke a diagnostic and does not cause
+     ‘rmdir’ to exit unsuccessfully.
+
+‘-v’
+‘--verbose’
+     Give a diagnostic for each successful removal.  DIRECTORY is
+     removed.
+
+
+
+
+IN MKDIR COMMAND
+‘-p’
+‘--parents’
+     Make any missing parent directories for each argument, setting
+     their file permission bits to the umask modified by ‘u+wx’.  Ignore
+     existing parent directories, and do not change their file
+     permission bits.
+
+‘-v’
+‘--verbose’
+     Print a message for each created directory.  This is most useful
+     with ‘--parents’.
+
+
+IN CD COMMAND
+help 	tells in brief about the cd command
+
+
+IN PWD COMMAND
+help 	tells in brief about the pwd command
